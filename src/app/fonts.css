@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&family=Russo+One&display=swap');
+
+:root {
+    --primary-font: 'Russo One', sans-serif;
+    --secondary-font: 'Libre Franklin', sans-serif;
+
+    --primary-font-color-light: #f2f2f2;
+    --complementary-font-color-light: #e5e5e5;
+
+    --primary-font-color-dark: #191919;
+    --complementary-font-color-dark: #252525;
+
+    --max-text-width: 860px;
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+    font-family: var(--primary-font);
+    color: var(--primary-font-color-dark);
+}
+
+p,
+a,
+span,
+label,
+input,
+li {
+    font-family: var(--secondary-font);
+    color: var(--complementary-font-color-dark);
+}
+
+h1 {
+    font-size: 2.3em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+p,
+a,
+span,
+label,
+input,
+li,
+button {
+    font-size: 1em;
+}
+
+p {
+    margin-top: .5em;
+}
+
+@media screen and (min-width: 960px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    h4 {
+        font-size: 1.2em;
+    }
+}

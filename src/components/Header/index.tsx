@@ -1,42 +1,39 @@
 import styles from './styles.module.css'
 
 import Link from 'next/link'
-import { Phone } from '@mui/icons-material'
+import Image from 'next/image'
 
-import LinkButton from '../LinkButton'
+import { LinkButton } from '../Buttons'
+
+import LogoSvg from '@/assets/svg/logo.svg'
+import { MenuOutlined } from '@mui/icons-material'
 
 const Header = () => {
     return (
         <header className={styles.header}>
-            <nav>
-                <ul className={styles.navigation}>
+            <Link href='/' className={styles.logo}>
+                <Image src={LogoSvg} alt='Logo da Enterprise' />
+            </Link>
+            <nav className={styles.navigation}>
+                <ul>
                     <li>
-                        <Link href='/'>
-                            Início
-                        </Link>
+                        <Link href='/'>Início</Link>
                     </li>
                     <li>
-                        <Link href='/'>
-                            Soluções
-                        </Link>
+                        <Link href='/'>Soluções</Link>
                     </li>
                     <li>
-                        <Link href='/'>
-                            Serviços
-                        </Link>
+                        <Link href='/'>Serviços</Link>
                     </li>
                     <li>
-                        <Link href='/'>
-                            Contato
-                        </Link>
+                        <Link href='/'>Contato</Link>
                     </li>
                 </ul>
+                <LinkButton href='/' value='Whatsapp' />
             </nav>
-            <LinkButton
-                href='/'
-                value='Whatsapp'
-                icon={Phone}
-            />
+            <button className={styles.open_menu}>
+                <MenuOutlined />
+            </button>
         </header>
     )
 }
